@@ -54,7 +54,7 @@ enum mcs51_format { /* MCS-51 format table              */
     MCS51_INS_TRE,      /* ins  @reg                    */
     MCS51_INS_TRA,      /* ins  @reg, a                 */
     MCS51_INS_TRI,      /* ins  @reg, #immed            */
-    MCS51_INS_TIO,      /* ins  @reg, #immed, offset     */
+    MCS51_INS_TIO,      /* ins  @reg, #immed, offset    */
     MCS51_INS_TRD,      /* ins  @reg, direct            */
 
     MCS51_INS_TPA,      /* ins  @dptr, a                */
@@ -150,7 +150,7 @@ static const struct mcs51_ops mcs51_table[] = {
     { 0x78, 0xf0, 0x8, 0xf, 2, MCS51_INS_REI, "mov"},   /* mov      reg, #immed             */
 
     { 0x80, 0xff, 0x0, 0x0, 2, MCS51_INS_OFF, "sjmp"},  /* sjmp     offset                  */
-    { 0x82, 0xff, 0x0, 0x0, 2, MCS51_INS_CON, "anl"},   /* anl      c, bit                  */
+    { 0x82, 0xff, 0x0, 0x0, 2, MCS51_INS_COB, "anl"},   /* anl      c, bit                  */
     { 0x83, 0xff, 0x0, 0x0, 1, MCS51_INS_ATC, "movc"},  /* movc     a, @a+pc                */
     { 0x84, 0xff, 0x0, 0x0, 1, MCS51_INS_ACB, "div"},   /* div      ab                      */
     { 0x85, 0xff, 0x0, 0x0, 3, MCS51_INS_DID, "mov"},   /* mov      direct, direct          */
