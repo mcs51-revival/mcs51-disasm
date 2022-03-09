@@ -16,7 +16,7 @@ int print_insn_mcs51(uint8_t *data)
         if ((walk->opcode ^ data[0]) & walk->mask)
             continue;
 
-        tmp = data[0] & ~walk->mask;
+        tmp = data[0] & walk->reg;
         if (tmp < walk->min || walk->max < tmp)
             continue;
 
